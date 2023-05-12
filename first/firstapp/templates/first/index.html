@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  
+    <h1>this is index page </h1>
+    <H2>FOOD BLOG as well as REPORT CARD PROJECT</H2>
+    <br><br>
+    <h1>logout and register </h1>
+    <h2>or </h2>
+    <h1> type - 127.0.0.1:8000/students <h3>to see students card</h3></h1>
+
+    {{peoples}}
+    <br>
+    <hr>
+    <table>
+  
+        <tr>   
+            <th>sl no</th>
+            <th>name</th>
+            <th>iq</th>   
+        </tr>
+ 
+ 
+            {% for i in peoples %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.sharp}}</td>
+        </tr>
+
+            {% endfor %}
+</table>
+<a href="/home/">home</a>
+<a href="/about/">About</a>
+
+
+{% endblock %}
